@@ -1,0 +1,313 @@
+suvar6@SuviDesktop:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.7G     0  3.7G   0% /usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
+none            3.7G  4.0K  3.7G   1% /mnt/wsl
+drivers         476G  140G  336G  30% /usr/lib/wsl/drivers
+/dev/sdd       1007G  3.4G  953G   1% /
+none            3.7G  872K  3.7G   1% /mnt/wslg
+none            3.7G     0  3.7G   0% /usr/lib/wsl/lib
+rootfs          3.7G  2.8M  3.7G   1% /init
+none            3.7G  552K  3.7G   1% /run
+none            3.7G     0  3.7G   0% /run/lock
+none            3.7G   12K  3.7G   1% /run/shm
+none            3.7G  104K  3.7G   1% /mnt/wslg/versions.txt
+none            3.7G  104K  3.7G   1% /mnt/wslg/doc
+C:\             476G  140G  336G  30% /mnt/c
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           3.7G     0  3.7G   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           756M   12K  756M   1% /run/user/1000
+suvar6@SuviDesktop:~$ df -h /
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdd       1007G  3.4G  953G   1% /
+suvar6@SuviDesktop:~$ df -Th
+Filesystem     Type     Size  Used Avail Use% Mounted on
+none           overlay  3.7G     0  3.7G   0% /usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
+none           tmpfs    3.7G  4.0K  3.7G   1% /mnt/wsl
+drivers        9p       476G  140G  336G  30% /usr/lib/wsl/drivers
+/dev/sdd       ext4    1007G  3.4G  953G   1% /
+none           tmpfs    3.7G  872K  3.7G   1% /mnt/wslg
+none           overlay  3.7G     0  3.7G   0% /usr/lib/wsl/lib
+rootfs         rootfs   3.7G  2.8M  3.7G   1% /init
+none           tmpfs    3.7G  552K  3.7G   1% /run
+none           tmpfs    3.7G     0  3.7G   0% /run/lock
+none           tmpfs    3.7G   12K  3.7G   1% /run/shm
+none           overlay  3.7G  104K  3.7G   1% /mnt/wslg/versions.txt
+none           overlay  3.7G  104K  3.7G   1% /mnt/wslg/doc
+C:\            9p       476G  140G  336G  30% /mnt/c
+none           tmpfs    1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs          tmpfs    3.7G     0  3.7G   0% /tmp
+none           tmpfs    1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+none           tmpfs    1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs          tmpfs    756M   12K  756M   1% /run/user/1000
+suvar6@SuviDesktop:~$ ps
+    PID TTY          TIME CMD
+  22897 pts/5    00:00:00 bash
+  22965 pts/5    00:00:00 ps
+suvar6@SuviDesktop:~$ ps -e
+    PID TTY          TIME CMD
+      1 ?        00:00:23 systemd
+      2 hvc0     00:00:02 init-systemd(Ub
+      6 hvc0     00:00:00 init
+     47 ?        00:00:14 systemd-journal
+     72 ?        00:00:01 systemd-resolve
+     94 ?        00:05:39 systemd-udevd
+    209 ?        00:00:00 chronyd-starter
+    210 ?        00:00:01 cron
+    211 ?        00:00:02 dbus-daemon
+    215 ?        00:02:17 fail2ban-server
+    220 ?        00:00:00 networkd-dispat
+    275 ?        00:00:01 systemd-logind
+    300 ?        00:00:02 rsyslogd
+    415 ?        00:00:04 chronyd
+    431 ?        00:00:00 chronyd
+    470 tty1     00:00:00 agetty
+    479 ?        00:00:00 unattended-upgr
+    582 ?        00:00:03 master
+    584 ?        00:00:00 qmgr
+    592 ?        00:00:00 SessionLeader
+    593 ?        00:00:00 Relay(597)
+    597 pts/0    00:00:00 bash
+    600 ?        00:00:00 login
+    660 ?        00:00:01 systemd
+    662 ?        00:00:00 (sd-pam)
+    689 pts/1    00:00:00 bash
+   1252 ?        00:00:00 SessionLeader
+   1253 ?        00:00:00 Relay(1254)
+   1254 pts/2    00:00:00 bash
+   1479 ?        00:00:04 polkitd
+   2431 ?        00:00:00 squid
+   2435 ?        00:00:16 squid
+   2436 ?        00:00:00 log_file_daemon
+  11712 ?        00:00:00 dbus-daemon
+  18415 ?        00:00:00 nginx
+  18417 ?        00:00:00 nginx
+  18418 ?        00:00:00 nginx
+  18419 ?        00:00:00 nginx
+  18420 ?        00:00:00 nginx
+  18421 ?        00:00:00 nginx
+  18422 ?        00:00:00 nginx
+  18423 ?        00:00:00 nginx
+  18424 ?        00:00:00 nginx
+  18425 ?        00:00:00 nginx
+  18426 ?        00:00:00 nginx
+  18427 ?        00:00:00 nginx
+  18428 ?        00:00:00 nginx
+  19985 ?        00:00:00 pinger
+  22073 ?        00:00:00 pickup
+  22230 ?        00:00:00 SessionLeader
+  22231 ?        00:00:00 Relay(22233)
+  22233 pts/4    00:00:00 bash
+  22595 pts/4    00:00:00 less
+  22603 ?        00:00:00 SessionLeader
+  22604 ?        00:00:00 Relay(22605)
+  22605 pts/3    00:00:00 bash
+  22889 pts/3    00:00:00 top
+  22890 ?        00:00:00 SessionLeader
+  22891 ?        00:00:00 Relay(22897)
+  22897 pts/5    00:00:00 bash
+  22957 ?        00:00:00 cleanup
+  22958 ?        00:00:00 trivial-rewrite
+  22959 ?        00:00:00 local
+  22975 pts/5    00:00:00 ps
+suvar6@SuviDesktop:~$ ps -f
+UID          PID    PPID  C STIME TTY          TIME CMD
+suvar6     22897   22891  0 17:33 pts/5    00:00:00 -bash
+suvar6     22985   22897  0 17:36 pts/5    00:00:00 ps -f
+suvar6@SuviDesktop:~$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.2  24972 16128 ?        Ss   Nov03   0:23 /sbin/ini
+root           2  0.0  0.0   3180  2212 hvc0     Sl+  Nov03   0:02 /init
+root           6  0.0  0.0   3180  2044 hvc0     Sl+  Nov03   0:00 plan9 --c
+root          47  0.0  0.2  50552 20352 ?        S<s  Nov03   0:14 /usr/lib/
+systemd+      72  0.0  0.1  22428 14484 ?        Ss   Nov03   0:01 /usr/lib/
+root          94  0.2  0.1  35164 12384 ?        Ss   Nov03   5:39 /usr/lib/
+root         209  0.0  0.0   2888  2012 ?        Ss   Nov03   0:00 /bin/sh /
+root         210  0.0  0.0   4472  3140 ?        Ss   Nov03   0:01 /usr/sbin
+message+     211  0.0  0.0   8804  5556 ?        Ss   Nov03   0:02 @dbus-dae
+root         215  0.1  0.4 438968 34436 ?        Ssl  Nov03   2:17 /usr/bin/
+root         220  0.0  0.3  44112 29756 ?        Ss   Nov03   0:00 /usr/bin/
+root         275  0.0  0.1  18636  9468 ?        Ss   Nov03   0:01 /usr/lib/
+syslog       300  0.0  0.0 220548  6088 ?        Ssl  Nov03   0:02 /usr/sbin
+_chrony      415  0.0  0.1  23724 11208 ?        S    Nov03   0:04 /usr/sbin
+_chrony      431  0.0  0.0  12096  2468 ?        S    Nov03   0:00 /usr/sbin
+root         470  0.0  0.0   5492  2820 tty1     Ss+  Nov03   0:00 /usr/sbin
+root         479  0.0  0.4 123480 32740 ?        Ssl  Nov03   0:00 /usr/bin/
+root         582  0.0  0.0  45752  4884 ?        Ss   Nov03   0:03 /usr/lib/
+postfix      584  0.0  0.1  46404  8468 ?        S    Nov03   0:00 qmgr -l -
+root         592  0.0  0.0   3184  1116 ?        Ss   Nov03   0:00 /init
+root         593  0.0  0.0   3200  1124 ?        S    Nov03   0:00 /init
+suvar6       597  0.0  0.0   6784  6144 pts/0    Ss+  Nov03   0:00 -bash
+root         600  0.0  0.0   8648  5532 ?        Ss   Nov03   0:00 login --
+suvar6       660  0.0  0.1  22752 13484 ?        Ss   Nov03   0:01 /usr/lib/
+suvar6       662  0.0  0.0  22916  4128 ?        S    Nov03   0:00 (sd-pam)
+suvar6       689  0.0  0.0   6136  5512 pts/1    Ss+  Nov03   0:00 -bash
+root        1252  0.0  0.0   3184  1124 ?        Ss   Nov03   0:00 /init
+root        1253  0.0  0.0   3200  1260 ?        S    Nov03   0:00 /init
+suvar6      1254  0.0  0.0   6784  6208 pts/2    Ss+  Nov03   0:00 -bash
+polkitd     1479  0.0  0.1 306448  8424 ?        Ssl  Nov03   0:04 /usr/lib/
+root        2431  0.0  0.2  30720 18100 ?        Ss   Nov03   0:00 /usr/sbin
+proxy       2435  0.0  0.3  35964 23416 ?        S    Nov03   0:16 (squid-1)
+proxy       2436  0.0  0.0   6904  3936 ?        S    Nov03   0:00 (logfile-
+suvar6     11712  0.0  0.0   8552  5084 ?        Ss   08:32   0:00 /usr/bin/
+root       18415  0.0  0.1  14856  9504 ?        S    08:32   0:00 nginx: ma
+www-data   18417  0.0  0.0  16916  5328 ?        S    08:32   0:00 nginx: wo
+www-data   18418  0.0  0.0  16916  5328 ?        S    08:32   0:00 nginx: wo
+www-data   18419  0.0  0.0  16916  5328 ?        S    08:32   0:00 nginx: wo
+www-data   18420  0.0  0.0  16916  5328 ?        S    08:32   0:00 nginx: wo
+www-data   18421  0.0  0.0  16916  5328 ?        S    08:32   0:00 nginx: wo
+www-data   18422  0.0  0.0  16916  5328 ?        S    08:32   0:00 nginx: wo
+www-data   18423  0.0  0.0  16916  5328 ?        S    08:32   0:00 nginx: wo
+www-data   18424  0.0  0.0  16916  5328 ?        S    08:32   0:00 nginx: wo
+www-data   18425  0.0  0.0  16916  5328 ?        S    08:32   0:00 nginx: wo
+www-data   18426  0.0  0.0  16916  5328 ?        S    08:32   0:00 nginx: wo
+www-data   18427  0.0  0.0  16916  5328 ?        S    08:32   0:00 nginx: wo
+www-data   18428  0.0  0.0  16916  5328 ?        S    08:32   0:00 nginx: wo
+proxy      19985  0.0  0.0   7040  4376 ?        S    11:09   0:00 (pinger)
+postfix    22073  0.0  0.1  46224  8564 ?        S    17:00   0:00 pickup -l
+root       22230  0.0  0.0   3184  1124 ?        Ss   17:09   0:00 /init
+root       22231  0.0  0.0   3200  1260 ?        S    17:09   0:00 /init
+suvar6     22233  0.0  0.0   6268  5616 pts/4    Ss   17:09   0:00 -bash
+suvar6     22595  0.0  0.0   3656  2724 pts/4    S+   17:21   0:00 less /etc
+root       22603  0.0  0.0   3184  1124 ?        Ss   17:21   0:00 /init
+root       22604  0.0  0.0   3200  1132 ?        S    17:21   0:00 /init
+suvar6     22605  0.0  0.0   6268  5608 pts/3    Ss   17:21   0:00 -bash
+suvar6     22889  0.1  0.0   8168  6052 pts/3    S+   17:32   0:00 top
+root       22890  0.0  0.0   3184  1124 ?        Ss   17:33   0:00 /init
+root       22891  0.0  0.0   3200  1132 ?        S    17:33   0:00 /init
+suvar6     22897  0.0  0.0   6268  5680 pts/5    Ss   17:33   0:00 -bash
+postfix    22957  0.0  0.1  46332  8696 ?        S    17:35   0:00 cleanup -
+postfix    22958  0.0  0.1  46232  8508 ?        S    17:35   0:00 trivial-r
+postfix    22959  0.0  0.1  45824  9380 ?        S    17:35   0:00 local -t
+suvar6     22995  0.0  0.0   7160  4380 pts/5    R+   17:36   0:00 ps aux
+suvar6@SuviDesktop:~$ ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 Nov03 ?        00:00:23 /sbin/init
+root           2       1  0 Nov03 hvc0     00:00:02 /init
+root           6       2  0 Nov03 hvc0     00:00:00 plan9 --control-socket 7
+root          47       1  0 Nov03 ?        00:00:14 /usr/lib/systemd/systemd
+systemd+      72       1  0 Nov03 ?        00:00:01 /usr/lib/systemd/systemd
+root          94       1  0 Nov03 ?        00:05:39 /usr/lib/systemd/systemd
+root         209       1  0 Nov03 ?        00:00:00 /bin/sh /usr/lib/systemd
+root         210       1  0 Nov03 ?        00:00:01 /usr/sbin/cron -f -P
+message+     211       1  0 Nov03 ?        00:00:02 @dbus-daemon --system --
+root         215       1  0 Nov03 ?        00:02:17 /usr/bin/python3 /usr/bi
+root         220       1  0 Nov03 ?        00:00:00 /usr/bin/python3 /usr/bi
+root         275       1  0 Nov03 ?        00:00:01 /usr/lib/systemd/systemd
+syslog       300       1  0 Nov03 ?        00:00:02 /usr/sbin/rsyslogd -n -i
+_chrony      415     209  0 Nov03 ?        00:00:04 /usr/sbin/chronyd -n -F
+_chrony      431     415  0 Nov03 ?        00:00:00 /usr/sbin/chronyd -n -F
+root         470       1  0 Nov03 tty1     00:00:00 /usr/sbin/agetty --nores
+root         479       1  0 Nov03 ?        00:00:00 /usr/bin/python3 /usr/sh
+root         582       1  0 Nov03 ?        00:00:03 /usr/lib/postfix/sbin/ma
+postfix      584     582  0 Nov03 ?        00:00:00 qmgr -l -t unix -u
+root         592       2  0 Nov03 ?        00:00:00 /init
+root         593     592  0 Nov03 ?        00:00:00 /init
+suvar6       597     593  0 Nov03 pts/0    00:00:00 -bash
+root         600       2  0 Nov03 ?        00:00:00 login -- suvar6
+suvar6       660       1  0 Nov03 ?        00:00:01 /usr/lib/systemd/systemd
+suvar6       662     660  0 Nov03 ?        00:00:00 (sd-pam)
+suvar6       689     600  0 Nov03 pts/1    00:00:00 -bash
+root        1252       2  0 Nov03 ?        00:00:00 /init
+root        1253    1252  0 Nov03 ?        00:00:00 /init
+suvar6      1254    1253  0 Nov03 pts/2    00:00:00 -bash
+polkitd     1479       1  0 Nov03 ?        00:00:04 /usr/lib/polkit-1/polkit
+root        2431       1  0 Nov03 ?        00:00:00 /usr/sbin/squid --foregr
+proxy       2435    2431  0 Nov03 ?        00:00:16 (squid-1) --kid squid-1
+proxy       2436    2435  0 Nov03 ?        00:00:00 (logfile-daemon) /var/lo
+suvar6     11712     660  0 08:32 ?        00:00:00 /usr/bin/dbus-daemon --s
+root       18415       1  0 08:32 ?        00:00:00 nginx: master process /u
+www-data   18417   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18418   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18419   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18420   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18421   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18422   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18423   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18424   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18425   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18426   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18427   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18428   18415  0 08:32 ?        00:00:00 nginx: worker process
+proxy      19985    2435  0 11:09 ?        00:00:00 (pinger)
+postfix    22073     582  0 17:00 ?        00:00:00 pickup -l -t unix -u
+root       22230       2  0 17:09 ?        00:00:00 /init
+root       22231   22230  0 17:09 ?        00:00:00 /init
+suvar6     22233   22231  0 17:09 pts/4    00:00:00 -bash
+suvar6     22595   22233  0 17:21 pts/4    00:00:00 less /etc/passwd
+root       22603       2  0 17:21 ?        00:00:00 /init
+root       22604   22603  0 17:21 ?        00:00:00 /init
+suvar6     22605   22604  0 17:21 pts/3    00:00:00 -bash
+suvar6     22889   22605  0 17:32 pts/3    00:00:00 top
+root       22890       2  0 17:33 ?        00:00:00 /init
+root       22891   22890  0 17:33 ?        00:00:00 /init
+suvar6     22897   22891  0 17:33 pts/5    00:00:00 -bash
+postfix    22957     582  0 17:35 ?        00:00:00 cleanup -z -t unix -u
+postfix    22958     582  0 17:35 ?        00:00:00 trivial-rewrite -n rewri
+postfix    22959     582  0 17:35 ?        00:00:00 local -t unix
+suvar6     23005   22897  0 17:36 pts/5    00:00:00 ps -ef
+suvar6@SuviDesktop:~$ ps -u suvar6
+    PID TTY          TIME CMD
+    597 pts/0    00:00:00 bash
+    660 ?        00:00:01 systemd
+    662 ?        00:00:00 (sd-pam)
+    689 pts/1    00:00:00 bash
+   1254 pts/2    00:00:00 bash
+  11712 ?        00:00:00 dbus-daemon
+  22233 pts/4    00:00:00 bash
+  22595 pts/4    00:00:00 less
+  22605 pts/3    00:00:00 bash
+  22889 pts/3    00:00:00 top
+  22897 pts/5    00:00:00 bash
+  23015 pts/5    00:00:00 ps
+suvar6@SuviDesktop:~$ ps -p 1234
+    PID TTY          TIME CMD
+suvar6@SuviDesktop:~$ ps aux | grep python
+root         215  0.1  0.4 438968 34436 ?        Ssl  Nov03   2:18 /usr/binpython3 /usr/bin/fail2ban-server -xf start
+root         220  0.0  0.3  44112 29756 ?        Ss   Nov03   0:00 /usr/binpython3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         479  0.0  0.4 123480 32740 ?        Ssl  Nov03   0:00 /usr/binpython3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+suvar6     23036  0.0  0.0   4128  2392 pts/5    S+   17:37   0:00 grep --color=auto python
+suvar6@SuviDesktop:~$ ps -ef | grep nginx
+root       18415       1  0 08:32 ?        00:00:00 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+www-data   18417   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18418   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18419   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18420   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18421   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18422   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18423   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18424   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18425   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18426   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18427   18415  0 08:32 ?        00:00:00 nginx: worker process
+www-data   18428   18415  0 08:32 ?        00:00:00 nginx: worker process
+suvar6     23047   22897  0 17:37 pts/5    00:00:00 grep --color=auto nginx
+suvar6@SuviDesktop:~$ kill 1234
+-bash: kill: (1234) - No such process
+suvar6@SuviDesktop:~$ ps -p $$
+    PID TTY          TIME CMD
+  22897 pts/5    00:00:00 bash
+suvar6@SuviDesktop:~$ ps aux --sort=-%cpu | head -10
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root          94  0.2  0.1  35164 12384 ?        Ss   Nov03   5:39 /usr/lib/systemd/systemd-udevd
+root         215  0.1  0.4 438968 34436 ?        Ssl  Nov03   2:18 /usr/bin/python3 /usr/bin/fail2ban-server -xf start
+suvar6     22889  0.1  0.0   8168  6056 pts/3    S+   17:32   0:00 top
+suvar6     22897  0.0  0.0   6268  5680 pts/5    Ss   17:33   0:00 -bash
+root           1  0.0  0.2  24972 16128 ?        Ss   Nov03   0:23 /sbin/init
+suvar6     22605  0.0  0.0   6268  5608 pts/3    Ss   17:21   0:00 -bash
+proxy       2435  0.0  0.3  35964 23416 ?        S    Nov03   0:16 (squid-1) --kid squid-1 --foreground -sYC
+root          47  0.0  0.2  50552 20352 ?        S<s  Nov03   0:14 /usr/lib/systemd/systemd-journald
+root       22604  0.0  0.0   3200  1132 ?        S    17:21   0:00 /init
+suvar6@SuviDesktop:~$ ps aux --sort=-%mem | head -10
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         215  0.1  0.4 438968 34436 ?        Ssl  Nov03   2:18 /usr/bin/python3 /usr/bin/fail2ban-server -xf start
+root         479  0.0  0.4 123480 32740 ?        Ssl  Nov03   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         220  0.0  0.3  44112 29756 ?        Ss   Nov03   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+proxy       2435  0.0  0.3  35964 23416 ?        S    Nov03   0:16 (squid-1) --kid squid-1 --foreground -sYC
+root          47  0.0  0.2  50552 20352 ?        S<s  Nov03   0:14 /usr/lib/systemd/systemd-journald
+root        2431  0.0  0.2  30720 18100 ?        Ss   Nov03   0:00 /usr/sbin/squid --foreground -sYC
+root           1  0.0  0.2  24972 16128 ?        Ss   Nov03   0:23 /sbin/init
+systemd+      72  0.0  0.1  22428 14484 ?        Ss   Nov03   0:01 /usr/lib/systemd/systemd-resolved
+suvar6       660  0.0  0.1  22752 13484 ?        Ss   Nov03   0:01 /usr/lib/systemd/systemd --user
+suvar6@SuviDesktop:~$
