@@ -1,0 +1,646 @@
+suvar6@SuviDesktop:~$ less application.log
+application.log: No such file or directory
+suvar6@SuviDesktop:~$ less hi.txt
+hi.txt: No such file or directory
+suvar6@SuviDesktop:~$ printf "info server started\nERROR database failed\ninfo connected\n" > app.log
+suvar6@SuviDesktop:~$ grep "error" app.log
+suvar6@SuviDesktop:~$ grep "ERROR" app.log
+ERROR database failed
+suvar6@SuviDesktop:~$ grep -i "error" app.log
+ERROR database failed
+suvar6@SuviDesktop:~$ grep -n "ERROR" app.log
+2:ERROR database failed
+suvar6@SuviDesktop:~$ grep -r "ERROR" logs/
+grep: logs/: No such file or directory
+suvar6@SuviDesktop:~$ grep -v "INFO" app.log
+info server started
+ERROR database failed
+info connected
+suvar6@SuviDesktop:~$ find . -name "app.log"
+./app.log
+suvar6@SuviDesktop:~$ find . -name "*.txt"
+./myproject/hello.txt
+./proxy-test.txt
+./cicd-project/venv/lib/python3.14/site-packages/markupsafe-3.0.4.dist-info/licenses/LICENSE.txt
+./cicd-project/venv/lib/python3.14/site-packages/markupsafe-3.0.4.dist-info/top_level.txt
+./cicd-project/venv/lib/python3.14/site-packages/jinja2-3.1.6.dist-info/entry_points.txt
+./cicd-project/venv/lib/python3.14/site-packages/jinja2-3.1.6.dist-info/licenses/LICENSE.txt
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug-3.1.9.dist-info/licenses/LICENSE.txt
+./cicd-project/venv/lib/python3.14/site-packages/itsdangerous-2.2.0.dist-info/LICENSE.txt
+./cicd-project/venv/lib/python3.14/site-packages/blinker-1.9.0.dist-info/LICENSE.txt
+./cicd-project/venv/lib/python3.14/site-packages/pip-25.1.1.dist-info/entry_points.txt
+./cicd-project/venv/lib/python3.14/site-packages/pip-25.1.1.dist-info/licenses/AUTHORS.txt
+./cicd-project/venv/lib/python3.14/site-packages/pip-25.1.1.dist-info/licenses/LICENSE.txt
+./cicd-project/venv/lib/python3.14/site-packages/pip-25.1.1.dist-info/top_level.txt
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/vendor.txt
+./cicd-project/venv/lib/python3.14/site-packages/click-8.5.0.dist-info/licenses/LICENSE.txt
+./cicd-project/venv/lib/python3.14/site-packages/flask-3.0.0.dist-info/entry_points.txt
+./cicd-project/app/requirements.txt
+./venv/lib/python3.14/site-packages/markupsafe-3.0.3.dist-info/licenses/LICENSE.txt
+./venv/lib/python3.14/site-packages/markupsafe-3.0.3.dist-info/top_level.txt
+./venv/lib/python3.14/site-packages/jinja2-3.1.6.dist-info/entry_points.txt
+./venv/lib/python3.14/site-packages/jinja2-3.1.6.dist-info/licenses/LICENSE.txt
+./venv/lib/python3.14/site-packages/itsdangerous-2.2.0.dist-info/LICENSE.txt
+./venv/lib/python3.14/site-packages/blinker-1.9.0.dist-info/LICENSE.txt
+./venv/lib/python3.14/site-packages/pip-25.1.1.dist-info/entry_points.txt
+./venv/lib/python3.14/site-packages/pip-25.1.1.dist-info/licenses/AUTHORS.txt
+./venv/lib/python3.14/site-packages/pip-25.1.1.dist-info/licenses/LICENSE.txt
+./venv/lib/python3.14/site-packages/pip-25.1.1.dist-info/top_level.txt
+./venv/lib/python3.14/site-packages/pip/_vendor/vendor.txt
+./venv/lib/python3.14/site-packages/click-8.5.0.dist-info/licenses/LICENSE.txt
+./venv/lib/python3.14/site-packages/werkzeug-3.1.8.dist-info/licenses/LICENSE.txt
+./venv/lib/python3.14/site-packages/flask-3.1.3.dist-info/entry_points.txt
+./venv/lib/python3.14/site-packages/flask-3.1.3.dist-info/licenses/LICENSE.txt
+./my-ip.txt
+suvar6@SuviDesktop:~$ find . -type d
+.
+./.local
+./.local/share
+./.local/share/nano
+./.terraform.d
+./myproject
+./linux-monitoring
+./linux-monitoring/scripts
+./linux-monitoring/.git
+./linux-monitoring/.git/objects
+./linux-monitoring/.git/objects/44
+./linux-monitoring/.git/objects/60
+./linux-monitoring/.git/objects/ab
+./linux-monitoring/.git/objects/13
+./linux-monitoring/.git/objects/2d
+./linux-monitoring/.git/objects/8b
+./linux-monitoring/.git/objects/info
+./linux-monitoring/.git/objects/pack
+./linux-monitoring/.git/objects/64
+./linux-monitoring/.git/objects/aa
+./linux-monitoring/.git/objects/a7
+./linux-monitoring/.git/objects/b1
+./linux-monitoring/.git/objects/42
+./linux-monitoring/.git/objects/04
+./linux-monitoring/.git/refs
+./linux-monitoring/.git/refs/heads
+./linux-monitoring/.git/refs/tags
+./linux-monitoring/.git/info
+./linux-monitoring/.git/hooks
+./linux-monitoring/.git/logs
+./linux-monitoring/.git/logs/refs
+./linux-monitoring/.git/logs/refs/heads
+./linux-monitoring/logs
+./.aws
+./.azure
+./.azure/telemetry
+./.azure/commands
+./.azure/logs
+./.ssh
+./cicd-project
+./cicd-project/docker
+./cicd-project/k8s
+./cicd-project/terraform
+./cicd-project/scripts
+./cicd-project/venv
+./cicd-project/venv/lib
+./cicd-project/venv/lib/python3.14
+./cicd-project/venv/lib/python3.14/site-packages
+./cicd-project/venv/lib/python3.14/site-packages/jinja2
+./cicd-project/venv/lib/python3.14/site-packages/jinja2/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/markupsafe-3.0.4.dist-info
+./cicd-project/venv/lib/python3.14/site-packages/markupsafe-3.0.4.dist-info/licenses
+./cicd-project/venv/lib/python3.14/site-packages/flask
+./cicd-project/venv/lib/python3.14/site-packages/flask/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/flask/sansio
+./cicd-project/venv/lib/python3.14/site-packages/flask/sansio/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/flask/json
+./cicd-project/venv/lib/python3.14/site-packages/flask/json/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/click
+./cicd-project/venv/lib/python3.14/site-packages/click/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/jinja2-3.1.6.dist-info
+./cicd-project/venv/lib/python3.14/site-packages/jinja2-3.1.6.dist-info/licenses
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug-3.1.9.dist-info
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug-3.1.9.dist-info/licenses
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug/debug
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug/debug/shared
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug/debug/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug/datastructures
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug/datastructures/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug/middleware
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug/middleware/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug/wrappers
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug/wrappers/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug/routing
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug/routing/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug/sansio
+./cicd-project/venv/lib/python3.14/site-packages/werkzeug/sansio/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/itsdangerous-2.2.0.dist-info
+./cicd-project/venv/lib/python3.14/site-packages/blinker-1.9.0.dist-info
+./cicd-project/venv/lib/python3.14/site-packages/itsdangerous
+./cicd-project/venv/lib/python3.14/site-packages/itsdangerous/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/markupsafe
+./cicd-project/venv/lib/python3.14/site-packages/markupsafe/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip-25.1.1.dist-info
+./cicd-project/venv/lib/python3.14/site-packages/pip-25.1.1.dist-info/licenses
+./cicd-project/venv/lib/python3.14/site-packages/pip
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/cachecontrol
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/caches
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/caches/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/certifi
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/certifi/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/platformdirs
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/platformdirs/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/urllib3
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/urllib3/packages
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/urllib3/packages/backports
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/urllib3/packages/backports/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/urllib3/packages/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/urllib3/util
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/_securetransport
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/_securetransport/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/urllib3/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/pygments
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/pygments/filters
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/pygments/filters/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/pygments/styles
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/pygments/styles/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/pygments/lexers
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/pygments/lexers/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/pygments/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/pygments/formatters
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/pygments/formatters/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/idna
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/idna/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/dependency_groups
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/dependency_groups/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/tomli
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/tomli/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/rich
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/rich/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/packaging
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/packaging/licenses
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/packaging/licenses/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/packaging/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/msgpack
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/msgpack/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/distro
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/distro/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/distlib
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/distlib/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/pyproject_hooks
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/pyproject_hooks/_in_process
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/pyproject_hooks/_in_process/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/pyproject_hooks/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/pkg_resources
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/pkg_resources/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/tomli_w
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/tomli_w/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/resolvelib
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/resolvelib/resolvers
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/resolvelib/resolvers/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/resolvelib/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/requests
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/requests/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/truststore
+./cicd-project/venv/lib/python3.14/site-packages/pip/_vendor/truststore/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/metadata
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/metadata/importlib
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/metadata/importlib/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/metadata/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/cli
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/cli/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/network
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/network/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/resolution
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/resolution/legacy
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/resolution/legacy/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/resolution/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/resolution/resolvelib
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/resolution/resolvelib/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/index
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/index/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/distributions
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/distributions/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/vcs
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/vcs/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/operations
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/operations/build
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/operations/build/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/operations/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/operations/install
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/operations/install/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/commands
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/commands/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/models
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/models/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/locations
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/locations/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/utils
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/utils/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/req
+./cicd-project/venv/lib/python3.14/site-packages/pip/_internal/req/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/pip/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/click-8.5.0.dist-info
+./cicd-project/venv/lib/python3.14/site-packages/click-8.5.0.dist-info/licenses
+./cicd-project/venv/lib/python3.14/site-packages/blinker
+./cicd-project/venv/lib/python3.14/site-packages/blinker/__pycache__
+./cicd-project/venv/lib/python3.14/site-packages/flask-3.0.0.dist-info
+./cicd-project/venv/bin
+./cicd-project/venv/include
+./cicd-project/app
+./cicd-project/.git
+./cicd-project/.git/objects
+./cicd-project/.git/objects/44
+./cicd-project/.git/objects/60
+./cicd-project/.git/objects/ab
+./cicd-project/.git/objects/13
+./cicd-project/.git/objects/2d
+./cicd-project/.git/objects/8b
+./cicd-project/.git/objects/info
+./cicd-project/.git/objects/pack
+./cicd-project/.git/objects/64
+./cicd-project/.git/objects/aa
+./cicd-project/.git/objects/a7
+./cicd-project/.git/objects/b1
+./cicd-project/.git/objects/42
+./cicd-project/.git/objects/04
+./cicd-project/.git/refs
+./cicd-project/.git/refs/heads
+./cicd-project/.git/refs/tags
+./cicd-project/.git/info
+./cicd-project/.git/hooks
+./cicd-project/.git/logs
+./cicd-project/.git/logs/refs
+./cicd-project/.git/logs/refs/heads
+./cicd-project/ansible
+./cicd-project/logs
+./cicd-project/.github
+./cicd-project/.github/workflows
+./venv
+./venv/lib
+./venv/lib/python3.14
+./venv/lib/python3.14/site-packages
+./venv/lib/python3.14/site-packages/jinja2
+./venv/lib/python3.14/site-packages/jinja2/__pycache__
+./venv/lib/python3.14/site-packages/markupsafe-3.0.3.dist-info
+./venv/lib/python3.14/site-packages/markupsafe-3.0.3.dist-info/licenses
+./venv/lib/python3.14/site-packages/flask
+./venv/lib/python3.14/site-packages/flask/__pycache__
+./venv/lib/python3.14/site-packages/flask/sansio
+./venv/lib/python3.14/site-packages/flask/sansio/__pycache__
+./venv/lib/python3.14/site-packages/flask/json
+./venv/lib/python3.14/site-packages/flask/json/__pycache__
+./venv/lib/python3.14/site-packages/click
+./venv/lib/python3.14/site-packages/click/__pycache__
+./venv/lib/python3.14/site-packages/jinja2-3.1.6.dist-info
+./venv/lib/python3.14/site-packages/jinja2-3.1.6.dist-info/licenses
+./venv/lib/python3.14/site-packages/werkzeug
+./venv/lib/python3.14/site-packages/werkzeug/debug
+./venv/lib/python3.14/site-packages/werkzeug/debug/shared
+./venv/lib/python3.14/site-packages/werkzeug/debug/__pycache__
+./venv/lib/python3.14/site-packages/werkzeug/datastructures
+./venv/lib/python3.14/site-packages/werkzeug/datastructures/__pycache__
+./venv/lib/python3.14/site-packages/werkzeug/middleware
+./venv/lib/python3.14/site-packages/werkzeug/middleware/__pycache__
+./venv/lib/python3.14/site-packages/werkzeug/__pycache__
+./venv/lib/python3.14/site-packages/werkzeug/wrappers
+./venv/lib/python3.14/site-packages/werkzeug/wrappers/__pycache__
+./venv/lib/python3.14/site-packages/werkzeug/routing
+./venv/lib/python3.14/site-packages/werkzeug/routing/__pycache__
+./venv/lib/python3.14/site-packages/werkzeug/sansio
+./venv/lib/python3.14/site-packages/werkzeug/sansio/__pycache__
+./venv/lib/python3.14/site-packages/itsdangerous-2.2.0.dist-info
+./venv/lib/python3.14/site-packages/blinker-1.9.0.dist-info
+./venv/lib/python3.14/site-packages/itsdangerous
+./venv/lib/python3.14/site-packages/itsdangerous/__pycache__
+./venv/lib/python3.14/site-packages/markupsafe
+./venv/lib/python3.14/site-packages/markupsafe/__pycache__
+./venv/lib/python3.14/site-packages/pip-25.1.1.dist-info
+./venv/lib/python3.14/site-packages/pip-25.1.1.dist-info/licenses
+./venv/lib/python3.14/site-packages/pip
+./venv/lib/python3.14/site-packages/pip/_vendor
+./venv/lib/python3.14/site-packages/pip/_vendor/cachecontrol
+./venv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/caches
+./venv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/caches/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/certifi
+./venv/lib/python3.14/site-packages/pip/_vendor/certifi/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/platformdirs
+./venv/lib/python3.14/site-packages/pip/_vendor/platformdirs/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/urllib3
+./venv/lib/python3.14/site-packages/pip/_vendor/urllib3/packages
+./venv/lib/python3.14/site-packages/pip/_vendor/urllib3/packages/backports
+./venv/lib/python3.14/site-packages/pip/_vendor/urllib3/packages/backports/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/urllib3/packages/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/urllib3/util
+./venv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib
+./venv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/_securetransport
+./venv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/_securetransport/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/urllib3/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/pygments
+./venv/lib/python3.14/site-packages/pip/_vendor/pygments/filters
+./venv/lib/python3.14/site-packages/pip/_vendor/pygments/filters/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/pygments/styles
+./venv/lib/python3.14/site-packages/pip/_vendor/pygments/styles/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/pygments/lexers
+./venv/lib/python3.14/site-packages/pip/_vendor/pygments/lexers/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/pygments/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/pygments/formatters
+./venv/lib/python3.14/site-packages/pip/_vendor/pygments/formatters/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/idna
+./venv/lib/python3.14/site-packages/pip/_vendor/idna/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/dependency_groups
+./venv/lib/python3.14/site-packages/pip/_vendor/dependency_groups/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/tomli
+./venv/lib/python3.14/site-packages/pip/_vendor/tomli/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/rich
+./venv/lib/python3.14/site-packages/pip/_vendor/rich/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/packaging
+./venv/lib/python3.14/site-packages/pip/_vendor/packaging/licenses
+./venv/lib/python3.14/site-packages/pip/_vendor/packaging/licenses/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/packaging/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/msgpack
+./venv/lib/python3.14/site-packages/pip/_vendor/msgpack/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/distro
+./venv/lib/python3.14/site-packages/pip/_vendor/distro/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/distlib
+./venv/lib/python3.14/site-packages/pip/_vendor/distlib/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/pyproject_hooks
+./venv/lib/python3.14/site-packages/pip/_vendor/pyproject_hooks/_in_process
+./venv/lib/python3.14/site-packages/pip/_vendor/pyproject_hooks/_in_process/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/pyproject_hooks/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/pkg_resources
+./venv/lib/python3.14/site-packages/pip/_vendor/pkg_resources/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/tomli_w
+./venv/lib/python3.14/site-packages/pip/_vendor/tomli_w/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/resolvelib
+./venv/lib/python3.14/site-packages/pip/_vendor/resolvelib/resolvers
+./venv/lib/python3.14/site-packages/pip/_vendor/resolvelib/resolvers/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/resolvelib/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/requests
+./venv/lib/python3.14/site-packages/pip/_vendor/requests/__pycache__
+./venv/lib/python3.14/site-packages/pip/_vendor/truststore
+./venv/lib/python3.14/site-packages/pip/_vendor/truststore/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal
+./venv/lib/python3.14/site-packages/pip/_internal/metadata
+./venv/lib/python3.14/site-packages/pip/_internal/metadata/importlib
+./venv/lib/python3.14/site-packages/pip/_internal/metadata/importlib/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/metadata/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/cli
+./venv/lib/python3.14/site-packages/pip/_internal/cli/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/network
+./venv/lib/python3.14/site-packages/pip/_internal/network/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/resolution
+./venv/lib/python3.14/site-packages/pip/_internal/resolution/legacy
+./venv/lib/python3.14/site-packages/pip/_internal/resolution/legacy/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/resolution/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/resolution/resolvelib
+./venv/lib/python3.14/site-packages/pip/_internal/resolution/resolvelib/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/index
+./venv/lib/python3.14/site-packages/pip/_internal/index/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/distributions
+./venv/lib/python3.14/site-packages/pip/_internal/distributions/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/vcs
+./venv/lib/python3.14/site-packages/pip/_internal/vcs/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/operations
+./venv/lib/python3.14/site-packages/pip/_internal/operations/build
+./venv/lib/python3.14/site-packages/pip/_internal/operations/build/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/operations/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/operations/install
+./venv/lib/python3.14/site-packages/pip/_internal/operations/install/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/commands
+./venv/lib/python3.14/site-packages/pip/_internal/commands/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/models
+./venv/lib/python3.14/site-packages/pip/_internal/models/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/locations
+./venv/lib/python3.14/site-packages/pip/_internal/locations/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/utils
+./venv/lib/python3.14/site-packages/pip/_internal/utils/__pycache__
+./venv/lib/python3.14/site-packages/pip/_internal/req
+./venv/lib/python3.14/site-packages/pip/_internal/req/__pycache__
+./venv/lib/python3.14/site-packages/pip/__pycache__
+./venv/lib/python3.14/site-packages/click-8.5.0.dist-info
+./venv/lib/python3.14/site-packages/click-8.5.0.dist-info/licenses
+./venv/lib/python3.14/site-packages/werkzeug-3.1.8.dist-info
+./venv/lib/python3.14/site-packages/werkzeug-3.1.8.dist-info/licenses
+./venv/lib/python3.14/site-packages/flask-3.1.3.dist-info
+./venv/lib/python3.14/site-packages/flask-3.1.3.dist-info/licenses
+./venv/lib/python3.14/site-packages/blinker
+./venv/lib/python3.14/site-packages/blinker/__pycache__
+./venv/bin
+./venv/include
+./.config
+./.config/ubuntu-insights
+./.ansible
+./.ansible/collections
+./.ansible/collections/ansible_collections
+./.ansible/galaxy_cache
+./.ansible/tmp
+./app
+./.git
+./.git/objects
+./.git/objects/4b
+./.git/objects/info
+./.git/objects/pack
+./.git/refs
+./.git/refs/heads
+./.git/refs/tags
+./.git/info
+./.git/hooks
+./.cache
+./.cache/ubuntu-insights
+./.cache/ubuntu-insights/wsl_setup
+./.cache/ubuntu-insights/wsl_setup/uploaded
+./.cache/ubuntu-insights/wsl_setup/local
+./.cache/ubuntu-insights/linux
+./.cache/ubuntu-insights/linux/uploaded
+./.cache/ubuntu-insights/linux/local
+./.cache/Microsoft
+./.cache/Microsoft/DeveloperTools
+./.cache/pip
+./.cache/pip/http-v2
+./.cache/pip/http-v2/7
+./.cache/pip/http-v2/7/1
+./.cache/pip/http-v2/7/1/4
+./.cache/pip/http-v2/7/1/4/4
+./.cache/pip/http-v2/7/1/4/4/c
+./.cache/pip/http-v2/6
+./.cache/pip/http-v2/6/2
+./.cache/pip/http-v2/6/2/f
+./.cache/pip/http-v2/6/2/f/1
+./.cache/pip/http-v2/6/2/f/1/0
+./.cache/pip/http-v2/6/b
+./.cache/pip/http-v2/6/b/4
+./.cache/pip/http-v2/6/b/4/5
+./.cache/pip/http-v2/6/b/4/5/0
+./.cache/pip/http-v2/d
+./.cache/pip/http-v2/d/6
+./.cache/pip/http-v2/d/6/a
+./.cache/pip/http-v2/d/6/a/5
+./.cache/pip/http-v2/d/6/a/5/d
+./.cache/pip/http-v2/d/1
+./.cache/pip/http-v2/d/1/2
+./.cache/pip/http-v2/d/1/2/5
+./.cache/pip/http-v2/d/1/2/5/6
+./.cache/pip/http-v2/d/a
+./.cache/pip/http-v2/d/a/e
+./.cache/pip/http-v2/d/a/e/7
+./.cache/pip/http-v2/d/a/e/7/9
+./.cache/pip/http-v2/d/3
+./.cache/pip/http-v2/d/3/6
+./.cache/pip/http-v2/d/3/6/7
+./.cache/pip/http-v2/d/3/6/7/0
+./.cache/pip/http-v2/c
+./.cache/pip/http-v2/c/3
+./.cache/pip/http-v2/c/3/5
+./.cache/pip/http-v2/c/3/5/1
+./.cache/pip/http-v2/c/3/5/1/a
+./.cache/pip/http-v2/2
+./.cache/pip/http-v2/2/c
+./.cache/pip/http-v2/2/c/2
+./.cache/pip/http-v2/2/c/2/2
+./.cache/pip/http-v2/2/c/2/2/f
+./.cache/pip/http-v2/2/2
+./.cache/pip/http-v2/2/2/6
+./.cache/pip/http-v2/2/2/6/e
+./.cache/pip/http-v2/2/2/6/e/2
+./.cache/pip/http-v2/8
+./.cache/pip/http-v2/8/5
+./.cache/pip/http-v2/8/5/3
+./.cache/pip/http-v2/8/5/3/8
+./.cache/pip/http-v2/8/5/3/8/5
+./.cache/pip/http-v2/8/a
+./.cache/pip/http-v2/8/a/c
+./.cache/pip/http-v2/8/a/c/4
+./.cache/pip/http-v2/8/a/c/4/d
+./.cache/pip/http-v2/8/a/e
+./.cache/pip/http-v2/8/a/e/e
+./.cache/pip/http-v2/8/a/e/e/c
+./.cache/pip/http-v2/8/3
+./.cache/pip/http-v2/8/3/5
+./.cache/pip/http-v2/8/3/5/4
+./.cache/pip/http-v2/8/3/5/4/7
+./.cache/pip/http-v2/1
+./.cache/pip/http-v2/1/e
+./.cache/pip/http-v2/1/e/6
+./.cache/pip/http-v2/1/e/6/f
+./.cache/pip/http-v2/1/e/6/f/2
+./.cache/pip/http-v2/4
+./.cache/pip/http-v2/4/5
+./.cache/pip/http-v2/4/5/9
+./.cache/pip/http-v2/4/5/9/7
+./.cache/pip/http-v2/4/5/9/7/6
+./.cache/pip/http-v2/5
+./.cache/pip/http-v2/5/5
+./.cache/pip/http-v2/5/5/e
+./.cache/pip/http-v2/5/5/e/8
+./.cache/pip/http-v2/5/5/e/8/9
+./.cache/pip/http-v2/5/b
+./.cache/pip/http-v2/5/b/9
+./.cache/pip/http-v2/5/b/9/a
+./.cache/pip/http-v2/5/b/9/a/9
+./.cache/pip/http-v2/0
+./.cache/pip/http-v2/0/7
+./.cache/pip/http-v2/0/7/8
+./.cache/pip/http-v2/0/7/8/4
+./.cache/pip/http-v2/0/7/8/4/3
+./.cache/pip/http-v2/0/6
+./.cache/pip/http-v2/0/6/7
+./.cache/pip/http-v2/0/6/7/d
+./.cache/pip/http-v2/0/6/7/d/e
+./.cache/pip/http-v2/9
+./.cache/pip/http-v2/9/c
+./.cache/pip/http-v2/9/c/c
+./.cache/pip/http-v2/9/c/c/6
+./.cache/pip/http-v2/9/c/c/6/9
+./.cache/pip/http-v2/9/4
+./.cache/pip/http-v2/9/4/5
+./.cache/pip/http-v2/9/4/5/2
+./.cache/pip/http-v2/9/4/5/2/4
+./.cache/pip/http-v2/9/b
+./.cache/pip/http-v2/9/b/c
+./.cache/pip/http-v2/9/b/c/2
+./.cache/pip/http-v2/9/b/c/2/4
+./.cache/pip/http-v2/a
+./.cache/pip/http-v2/a/c
+./.cache/pip/http-v2/a/c/6
+./.cache/pip/http-v2/a/c/6/c
+./.cache/pip/http-v2/a/c/6/c/e
+./.cache/pip/http-v2/a/c/f
+./.cache/pip/http-v2/a/c/f/4
+./.cache/pip/http-v2/a/c/f/4/f
+./.cache/pip/http-v2/a/2
+./.cache/pip/http-v2/a/2/c
+./.cache/pip/http-v2/a/2/c/7
+./.cache/pip/http-v2/a/2/c/7/f
+./.cache/pip/http-v2/a/5
+./.cache/pip/http-v2/a/5/4
+./.cache/pip/http-v2/a/5/4/a
+./.cache/pip/http-v2/a/5/4/a/2
+./.cache/ubuntu-pro
+./.landscape
+suvar6@SuviDesktop:~$ find /var/log -type f -size +100M
+find: ‘/var/log/private’: Permission denied
+find: ‘/var/log/chrony’: Permission denied
+suvar6@SuviDesktop:~$ touch script.sh
+suvar6@SuviDesktop:~$ chmod 755 script.sh
+suvar6@SuviDesktop:~$ ls -l script.sh
+-rwxr-xr-x 1 suvar6 suvar6 0 Nov  4 17:28 script.sh
+suvar6@SuviDesktop:~$ chmod 644 file.txt
+chmod: cannot access 'file.txt': No such file or directory
+suvar6@SuviDesktop:~$ chmod 644 app.py
+suvar6@SuviDesktop:~$ chmod 600 app.py
+suvar6@SuviDesktop:~$ chmod +x script.sh
+suvar6@SuviDesktop:~$ sudo chown suvar6 script.sh
+[sudo: authenticate] Password:
+suvar6@SuviDesktop:~$ sudo chown suvar6:suvar6 script.sh
+suvar6@SuviDesktop:~$ top
+top - 17:47:53 up 1 day,  9:47,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks:  61 total,   1 running,  60 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.
+MiB Mem :   7558.6 total,   6725.8 free,    683.6 used,    312.4 buff/cache
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   6875.0 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+
+    215 root      20   0  438968  34436  19972 S   0.3   0.4   2:18.76
+  22889 suvar6    20   0    8168   6080   3932 R   0.3   0.1   0:00.95
+      1 root      20   0   24972  16128  11660 S   0.0   0.2   0:23.47
+      2 root      20   0    3180   2212   2072 S   0.0   0.0   0:02.45
+      6 root      20   0    3180   2044   1940 S   0.0   0.0   0:00.00
+     47 root      19  -1   50552  20368  18936 S   0.0   0.3   0:14.99
+     72 systemd+  20   0   22428  14484  11988 S   0.0   0.2   0:01.33
+     94 root      20   0   35164  12384   9256 S   0.0   0.2   5:39.39
+    209 root      20   0    2888   2012   1884 S   0.0   0.0   0:00.09
+    210 root      20   0    4472   3140   2892 S   0.0   0.0   0:01.07
+    211 message+  20   0    8804   5556   4740 S   0.0   0.1   0:02.79
+    220 root      20   0   44112  29756  14620 S   0.0   0.4   0:00.31
+    275 root      20   0   18636   9468   8148 S   0.0   0.1   0:01.20
+    300 syslog    20   0  220548   6088   4728 S   0.0   0.1   0:02.85
+    415 _chrony   20   0   23724  11208   7184 S   0.0   0.1   0:04.79
+    431 _chrony   20   0   12096   2468   1824 S   0.0   0.0   0:00.00
+    470 root      20   0    5492   2820   2640 S   0.0   0.0   0:00.01
+    479 root      20   0  123480  32740  18124 S   0.0   0.4   0:00.30
+    582 root      20   0   45752   4884   4248 S   0.0   0.1   0:03.31
+    584 postfix   20   0   46404   8468   7768 S   0.0   0.1   0:00.70
+    592 root      20   0    3184   1116    980 S   0.0   0.0   0:00.00
+    593 root      20   0    3200   1124    980 S   0.0   0.0   0:00.01
+    597 suvar6    20   0    6784   6144   3924 S   0.0   0.1   0:00.16
+    600 root      20   0    8648   5532   4688 S   0.0   0.1   0:00.01
+    660 suvar6    20   0   22752  13484  11040 S   0.0   0.2   0:01.94
+    662 suvar6    20   0   22916   4128   2128 S   0.0   0.1   0:00.00
+    689 suvar6    20   0    6136   5512   3924 S   0.0   0.1   0:00.04
+   1252 root      20   0    3184   1124    980 S   0.0   0.0   0:00.00
+   1253 root      20   0    3200   1260   1108 S   0.0   0.0   0:00.34
+   1254 suvar6    20   0    6784   6208   4000 S   0.0   0.1   0:00.22
+   1479 polkitd   20   0  306448   8424   7608 S   0.0   0.1   0:04.62
+   2431 root      20   0   30720  18100  12916 S   0.0   0.2   0:00.02
